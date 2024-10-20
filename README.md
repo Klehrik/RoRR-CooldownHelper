@@ -1,12 +1,15 @@
 Allows for displaying cooldowns on the HUD.  
 (Automatically adds Time Keeper's Secret's cooldown.)  
 
+Import line:  
 ```lua
 Cooldown = mods["Klehrik-CooldownHelper"].setup()
 
 ```
 
 ---
+
+### Functions
 
 ```lua
 Cooldown.set(inst, id, duration, [icon], [color]) -> nil
@@ -24,7 +27,7 @@ Overrides the existing cooldown if the ID is already in use.
 | `[icon]`      | sprite  | _Player HUD:_ The icon to display on the cooldown visual. |
 | `[color]`     | color   | _Player HUD:_ The color to use for the cooldown visual. |
 
-<br><br>
+<br>
 
 ```lua
 Cooldown.get(inst, id) -> number, number, sprite, color
