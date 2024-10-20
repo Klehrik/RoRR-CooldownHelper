@@ -1,0 +1,4 @@
+v Add cooldown set and remove to Timekeeper's Secret (normal and used); 7 *60 *60
+v Fix inconsistent ordering
+- Find a way to shift directive text up to make room for larger icons
+v Rename to CooldownHelper and only allow ".setup()" to pass a table of functions instead of ".auto()" (no multiple classes now)
