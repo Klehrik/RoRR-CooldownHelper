@@ -1,7 +1,7 @@
 Allows for displaying cooldowns on the HUD.  
 (Automatically adds Time Keeper's Secret's cooldown.)  
 
-![image](https://github.com/user-attachments/assets/b0c5e189-05b3-48a2-ab57-0cc0d68b1e52)
+![CDHelperShowcase.png](https://github.com/Klehrik/RoRR-CooldownHelper/blob/main/CDHelperShowcase.png?raw=true)
 
 Import line:  
 ```lua
