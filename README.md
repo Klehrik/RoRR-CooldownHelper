@@ -26,7 +26,7 @@ Overrides the existing cooldown if the ID is already in use.
 | `inst`        | CInstance or Instance object | The instance to set the cooldown for. |
 | `id`          | string  | The identifier for the cooldown. |
 | `duration`    | number  | The maximum time for the cooldown (in frames). |
-| `[icon]`      | sprite  | _Player HUD:_ The icon to display on the cooldown visual. |
+| `[icon]`      | sprite  | _Player HUD:_ The icon to display on the cooldown visual. <br>Should be 8px x 8px. |
 | `[color]`     | color   | _Player HUD:_ The color to use for the cooldown visual. |
 
 <br>
