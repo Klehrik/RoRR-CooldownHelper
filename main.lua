@@ -32,12 +32,12 @@ Initialize(function()
     -- Add timer for Timekeeper's Secret
     local spriteCooldown = Resources.sprite_load("cooldownHelper", "cooldown/timeKeepersSecret", _ENV["!plugins_mod_folder_path"].."/timeKeepersSecret.png", 1, 4, 4)
 
-    Item.find("ror-timeKeepersSecret"):onPickup(function(actor, stack)
+    Item.find("ror-timeKeepersSecret"):onAcquire(function(actor, stack)
         -- Remove cooldown
         Cooldown.set(actor, "cooldownHelper-timeKeepersSecret", 0)
     end)
 
-    Item.find("ror-timeKeepersSecretUsed"):onPickup(function(actor, stack)
+    Item.find("ror-timeKeepersSecretUsed"):onAcquire(function(actor, stack)
         -- Add cooldown
         Cooldown.set(actor, "cooldownHelper-timeKeepersSecret", 7 *60 *60, spriteCooldown, Color(0x826ec3))
     end)
