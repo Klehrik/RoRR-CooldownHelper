@@ -28,8 +28,8 @@ Cooldown.set = function(inst, id, duration, icon, color)
         table.insert(instDataOrder, id)
     end
 
-    if not inst:callback_exists("aphelionUtil-cooldownTick") then
-        inst:onPreStep("aphelionUtil-cooldownTick", function(inst)
+    if not inst:callback_exists("cooldownHelper-cooldownTick") then
+        inst:onPreStep("cooldownHelper-cooldownTick", function(inst)
             local instData = inst:get_data()
             for k, v in pairs(instData) do
                 instData[k][1] = v[1] - 1
@@ -58,7 +58,7 @@ end
 
 -- ========== Internal ==========
 
-Callback.add("onPlayerHUDDraw", "aphelionUtil-playerCooldownDisplay", function(self, other, result, args)
+Callback.add("onPlayerHUDDraw", "cooldownHelper-playerCooldownDisplay", function(self, other, result, args)
     local p = Player.get_client()
     if not p:exists() then return end
     local pData = p:get_data()
