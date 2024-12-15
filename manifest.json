@@ -4,7 +4,7 @@
 	"website_url": "https://github.com/Klehrik/RoRR-CooldownHelper",
 	"description": "Allows for displaying cooldowns on the HUD.",
 	"dependencies": [
-		"ReturnOfModding-ReturnOfModding-1.0.54",
+		"ReturnOfModding-ReturnOfModding-1.0.55",
 		"MGReturns-ENVY-1.1.1",
 		"RoRRModdingToolkit-RoRR_Modding_Toolkit-1.2.0"
 	]
