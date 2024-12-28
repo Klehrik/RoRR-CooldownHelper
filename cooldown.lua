@@ -58,13 +58,11 @@ end
 
 -- ========== Internal ==========
 
-Callback.add("onPlayerHUDDraw", "cooldownHelper-playerCooldownDisplay", function(self, other, result, args)
-    local p = Player.get_client()
-    if not p:exists() then return end
-    local pData = p:get_data()
-    local pDataOrder = p:get_data("order")
+Callback.add("onPlayerHUDDraw", "cooldownHelper-playerCooldownDisplay", function(player, hud_x, hud_y)
+    local pData = player:get_data()
+    local pDataOrder = player:get_data("order")
 
-    local x, y = args[3].value + 8, args[4].value - 13
+    local x, y = hud_x + 8, hud_y - 13
 
     gm.draw_set_color(Color.WHITE)
 
@@ -72,7 +70,7 @@ Callback.add("onPlayerHUDDraw", "cooldownHelper-playerCooldownDisplay", function
     for _, id in ipairs(pDataOrder) do
         local v = pData[id]
         if v then
-            gm.draw_set_alpha(0.8)
+            gm.draw_set_alpha(0.7)
             if v[4] then gm.draw_set_color(v[4]) end
             gm.draw_primitive_begin(6)  -- trianglefan
             gm.draw_vertex(_x, y)
